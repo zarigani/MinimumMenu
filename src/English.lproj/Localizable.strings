@@ -1,0 +1,5 @@
+// testRunAlertPanel
+"testTitle" = "Test";
+"testMessage" = "This is test.";
+"testOK" = "OK";
+"testCancel" = "Cancel";
