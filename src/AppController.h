@@ -11,6 +11,7 @@
 
 @interface AppController : NSObject {
     IBOutlet id window;
+    IBOutlet id preferenceWindow;
 }
 
 + (void)setupDefaults;

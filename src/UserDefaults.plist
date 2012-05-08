@@ -1,3 +1,4 @@
 {
-	windowTransparency = 0.9;
+	windowTransparency = "0.9";
+	hideApplicationMenu = NO;
 }

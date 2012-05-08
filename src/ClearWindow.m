@@ -113,20 +113,15 @@ static float		MENU_BAR_HEIGHT = 22;
 }
 
 - (void)show {
-    ////NSLog(@"show");
+    NSLog(@"show");
     [self setAlphaValue:[self windowTransparency]];
 }
 
 - (void)hide_ {
-    ////NSLog(@"hide_");
+    NSLog(@"hide_");
     if ([preferenceWindow isKeyWindow] == NO) {
         [self setAlphaValue:0.0];
     }
-}
-
-- (IBAction)windowTransparencyHasChanged:(id)sender {
-    //[self setAlphaValue:[sender floatValue]];
-    //[self setAlphaValue:[self windowTransparency]];
 }
 
 - (void)mouseEntered:(NSEvent *)event {

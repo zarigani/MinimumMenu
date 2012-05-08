@@ -55,13 +55,29 @@
     // NSUserDefaultsControllerにも設定
     [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:userDefaultsValuesDict];
     
-//    ([[NSUserDefaultsController sharedUserDefaultsController] appliesImmediately]) ? 
-//        NSLog(@"appliesImmediately:YES") : NSLog(@"appliesImmediately:NO");
+    ////([[NSUserDefaultsController sharedUserDefaultsController] appliesImmediately]) ? 
+    ////    NSLog(@"appliesImmediately:YES") : NSLog(@"appliesImmediately:NO");
 }
 
 - (void)awakeFromNib {
     //コード中の文字列翻訳のためのテスト
     //[self runTestAlertPanel];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification*)notification {
+    //NSMenuItemでなく、NSMenuのタイトルを設定する
+    //[[[NSApp mainMenu] itemAtIndex:0] setTitle:@""];
+    [[[[NSApp mainMenu] itemAtIndex:0] submenu] setTitle:@""];
+    
+    //アイコンメニューを表示する
+    NSImage *minu = [NSImage imageNamed:@"minu"];
+    [minu setSize:NSMakeSize(20,20)];
+    [[[NSApp mainMenu] itemAtIndex:0] setImage:minu];
+}
+
+- (void)applicationShouldHandleReopen:(NSApplication *)application hasVisibleWindows:(BOOL)flag {
+    NSLog(@"applicationShouldHandleReopen");
+    [preferenceWindow makeKeyAndOrderFront:self];
 }
 
 - (void)runTestAlertPanel {
@@ -90,12 +106,13 @@
 /*
  *  PreferenceWindowのDelegate処理
  */
-
 -(void) windowDidBecomeKey:(NSNotification *)notification {
+    ////NSLog(@"windowDidBecomeKey");
     [window show];
 }
 
 -(void) windowDidResignKey:(NSNotification *)notification {
+    ////NSLog(@"windowDidResignKey");
     [window hide_];
 }
 

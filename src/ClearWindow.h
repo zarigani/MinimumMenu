@@ -17,7 +17,6 @@
 - (void)storeActiveApp;
 - (void)restoreActiveApp;
 - (float)windowTransparency;
-- (IBAction)windowTransparencyHasChanged:(id)sender;
 - (void)show;
 - (void)hide_;
 
