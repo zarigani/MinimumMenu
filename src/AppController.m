@@ -76,7 +76,7 @@
 }
 
 - (void)applicationShouldHandleReopen:(NSApplication *)application hasVisibleWindows:(BOOL)flag {
-    NSLog(@"applicationShouldHandleReopen");
+    ////NSLog(@"applicationShouldHandleReopen");
     [preferenceWindow makeKeyAndOrderFront:self];
 }
 

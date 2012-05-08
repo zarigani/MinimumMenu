@@ -80,7 +80,7 @@ static float		MENU_BAR_HEIGHT = 22;
     //@"NSApplicationName"では日本語ローカライズされたアプリケーション名ではlaunchApplication出来ない（例: Stickies、スティッキーズ）
     //NSString* appName = [activeApp valueForKey:@"NSApplicationName"];
     NSString* currentAppBundleID = [currentApp valueForKey:@"NSApplicationBundleIdentifier"];
-    //NSLog([currentAppBundleID description]);
+    ////NSLog([currentAppBundleID description]);
     if (![currentAppBundleID isEqualToString:APP_BUNDLE_ID]) {
         [currentApp retain];
         if (activeApp) {
@@ -113,12 +113,12 @@ static float		MENU_BAR_HEIGHT = 22;
 }
 
 - (void)show {
-    NSLog(@"show");
+    ////NSLog(@"show");
     [self setAlphaValue:[self windowTransparency]];
 }
 
 - (void)hide_ {
-    NSLog(@"hide_");
+    ////NSLog(@"hide_");
     if ([preferenceWindow isKeyWindow] == NO) {
         [self setAlphaValue:0.0];
     }

@@ -248,6 +248,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -320,7 +322,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 59 1280 719 0 0 1280 778 </string>
+						<string>-1 59 1280 719 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,8 +333,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -350,22 +350,22 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8786F2FA1558B75A00CF542D</string>
+										<string>8786F3301558C29F00CF542D</string>
 										<key>history</key>
 										<array>
 											<string>871EA4C40E011927003F7934</string>
 											<string>87F7DBC11050A0E900017BF8</string>
 											<string>87F7DE201051024600017BF8</string>
-											<string>873398EF10510D9B0072EF6F</string>
 											<string>8786F17D15587A3000CF542D</string>
-											<string>8786F17F15587A3000CF542D</string>
 											<string>8786F18015587A3000CF542D</string>
 											<string>8786F1C81558949200CF542D</string>
 											<string>8786F2B41558B0E100CF542D</string>
-											<string>8786F2D01558B2AC00CF542D</string>
-											<string>8786F2D71558B37600CF542D</string>
-											<string>8786F2D81558B37600CF542D</string>
-											<string>8786F2D11558B2AC00CF542D</string>
+											<string>8786F3061558BBFD00CF542D</string>
+											<string>8786F3071558BBFD00CF542D</string>
+											<string>8786F3251558C14900CF542D</string>
+											<string>8786F3261558C14900CF542D</string>
+											<string>8786F3271558C14900CF542D</string>
+											<string>8786F3281558C14900CF542D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,7 +379,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1072, 455}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>-1 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -399,7 +399,7 @@
 								<key>Frame</key>
 								<string>{{0, 460}, {1072, 218}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>-1 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -546,7 +546,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>358135642.60403198</real>
+	<real>358138527.55668801</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -561,16 +561,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>8786F2FB1558B75A00CF542D</string>
 		<string>8786F1B2155893E400CF542D</string>
 		<string>8786F1B3155893E400CF542D</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>87BACE4A0DE6BFB20055EF0F</string>
-		<string>/Users/bebe/Documents/github/MinimumMenu/src/minu.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/bebe/Documents/github/MinimumMenu/src/minu.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 59 1280 719 0 0 1280 778 </string>
+	<string>-1 59 1280 719 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
