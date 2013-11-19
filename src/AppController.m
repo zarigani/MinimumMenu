@@ -73,6 +73,9 @@
     NSImage *minu = [NSImage imageNamed:@"minu"];
     [minu setSize:NSMakeSize(20,20)];
     [[[NSApp mainMenu] itemAtIndex:0] setImage:minu];
+    
+    //メインスクリーンと同じ大きさのウィンドウにする（メニューバー上部に表示されない対策）
+    [window setFrame:[[NSScreen mainScreen] frame] display:YES];
 }
 
 - (void)applicationShouldHandleReopen:(NSApplication *)application hasVisibleWindows:(BOOL)flag {
