@@ -78,6 +78,14 @@
     [window setFrame:[[NSScreen mainScreen] frame] display:YES];
 }
 
+- (void)applicationDidBecomeActive:(NSNotification*)notification {
+    //メインスクリーンと同じ大きさのウィンドウにする（解像度を変更したときの対策）
+    [window setFrame:[[NSScreen mainScreen] frame] display:YES];
+    
+    //トラッキングエリアを再設定
+    [[window initialFirstResponder] awakeFromNib];
+}
+
 - (void)applicationShouldHandleReopen:(NSApplication *)application hasVisibleWindows:(BOOL)flag {
     ////NSLog(@"applicationShouldHandleReopen");
     [preferenceWindow makeKeyAndOrderFront:self];
