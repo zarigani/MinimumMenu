@@ -16,7 +16,7 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
 static float		MENU_BAR_HEIGHT = 22;
 
 // ウィンドウを初期化して生成
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 {
     NSRect mainScreenFrame = [[NSScreen mainScreen] frame];
     NSRect areaFrame = NSMakeRect(mainScreenFrame.origin.x, 

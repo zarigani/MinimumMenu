@@ -298,8 +298,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -339,7 +337,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppController.m</string>
+								<string>README</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -347,19 +345,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppController.m</string>
+										<string>README</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>87EB44AF183B485A00505CF5</string>
+										<string>87EB44EF183B4D3600505CF5</string>
 										<key>history</key>
 										<array>
 											<string>871EA4C40E011927003F7934</string>
 											<string>87F7DBC11050A0E900017BF8</string>
 											<string>8786F1C81558949200CF542D</string>
-											<string>87EB44AC183B485A00505CF5</string>
-											<string>87EB44AD183B485A00505CF5</string>
-											<string>87EB44AE183B485A00505CF5</string>
+											<string>87EB44C8183B4AFC00505CF5</string>
+											<string>87EB44C9183B4AFC00505CF5</string>
+											<string>87EB44CA183B4AFC00505CF5</string>
+											<string>87EB44DC183B4BFA00505CF5</string>
+											<string>87EB44EC183B4D3600505CF5</string>
+											<string>87EB44ED183B4D3600505CF5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -371,14 +372,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 532}}</string>
+								<string>{{0, 0}, {1072, 528}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>532pt</string>
+							<string>528pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -391,14 +392,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 537}, {1072, 141}}</string>
+								<string>{{0, 533}, {1072, 145}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>141pt</string>
+							<string>145pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -417,9 +418,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>87EB44B0183B485A00505CF5</string>
+				<string>87EB44CD183B4AFC00505CF5</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>87EB44B1183B485A00505CF5</string>
+				<string>87EB44CE183B4AFC00505CF5</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,7 +541,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>406538330.00246602</real>
+	<real>406539574.385885</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -580,7 +581,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>NSWindow.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -597,6 +598,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -636,7 +639,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>87BACE4A0DE6BFB20055EF0F</string>
-				<string>87EB44B2183B485A00505CF5</string>
+				<string>87EB44C1183B4AE200505CF5</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
