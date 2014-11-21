@@ -10,7 +10,12 @@
 
 
 @interface EventView : NSView {
-
+    NSTrackingRectTag trackingTop, trackingBottom, trackingLeft, trackingRight;
+    bool allAroundTrackingArea;
 }
+
+- (void)addTrackingRects;
+- (void)removeTrackingRects;
+- (void)setAllAroundTrackingArea:(bool)flag;
 
 @end

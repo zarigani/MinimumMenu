@@ -13,18 +13,12 @@
 @implementation ClearWindow
 
 static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
-static float		MENU_BAR_HEIGHT = 22;
 
-// ウィンドウを初期化して生成
+// メインスクリーン（メニューバーのあるスクリーン）と同じサイズの透明ウィンドウを初期化して生成
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 {
-    NSRect mainScreenFrame = [[NSScreen mainScreen] frame];
-    NSRect areaFrame = NSMakeRect(mainScreenFrame.origin.x, 
-                                  mainScreenFrame.size.height - MENU_BAR_HEIGHT, 
-                                  mainScreenFrame.size.width, 
-                                  MENU_BAR_HEIGHT);
     //ウィンドウの初期化（NSBorderlessWindowMaskによってメニューバーを超えた移動が可能になる）
-    id win = [super initWithContentRect:areaFrame styleMask:NSBorderlessWindowMask backing:bufferingType defer:flag];
+    id win = [super initWithContentRect:[[NSScreen mainScreen] frame] styleMask:NSBorderlessWindowMask backing:bufferingType defer:flag];
     
     //ウィンドウが描画される上下レベル（レイヤーレベル）を設定（メニューバーよりも上のレベルに）
     [win setLevel: NSPopUpMenuWindowLevel];
@@ -33,7 +27,7 @@ static float		MENU_BAR_HEIGHT = 22;
     [win setBackgroundColor: [NSColor clearColor]];
     
     //ウィンドウの透明度を設定（不透明1.0〜透明0.0）
-//    [win setAlphaValue:0.0];
+    //[win setAlphaValue:0.0];
     
     //ウィンドウは不透明でない（つまり、透明である）
     [win setOpaque:NO];
@@ -128,11 +122,21 @@ static float		MENU_BAR_HEIGHT = 22;
     ////NSLog(@"mouseEntered");
     [self show];
     [self storeActiveApp];
+    ////NSLog([NSRunningApplication currentApplication].bundleIdentifier);
+    ////NSLog([currentApp valueForKey:@"NSApplicationBundleIdentifier"]);
+    ////NSLog(NSStringFromPoint([NSEvent mouseLocation]));
+    if (CGEventGetLocation(CGEventCreate(nil)).y > 0.0) {
+        [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
+    }
 }
 
 - (void)mouseExited:(NSEvent *)event {
     ////NSLog(@"mouseExited");
     [self hide_];
+    ////NSLog([NSString stringWithFormat:@"%f", CGEventGetLocation(CGEventCreate(nil)).y]);
+    if (CGEventGetLocation(CGEventCreate(nil)).y > 22.0) {
+        [self restoreActiveApp];
+    }
 }
 
 // 左マウスボタンを押した

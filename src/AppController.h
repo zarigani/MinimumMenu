@@ -15,6 +15,6 @@
 }
 
 + (void)setupDefaults;
-- (void)runTestAlertPanel;
+//- (void)runTestAlertPanel;
 
 @end

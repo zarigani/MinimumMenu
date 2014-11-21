@@ -91,28 +91,28 @@
     [preferenceWindow makeKeyAndOrderFront:self];
 }
 
-- (void)runTestAlertPanel {
-    int result = NSRunAlertPanel(NSLocalizedString(@"testTitle", nil), 
-                                 NSLocalizedString(@"testMessage", nil), 
-                                 NSLocalizedString(@"testOK", nil), 
-                                 NSLocalizedString(@"testCancel", nil),
-                                 nil);
-    switch (result) {
-        case NSAlertDefaultReturn:
-            NSLog(@"OK");
-            break;
-        case NSAlertAlternateReturn:
-            NSLog(@"Cancel");
-            [NSApp terminate:self];
-            break;
-        case NSAlertOtherReturn:
-            NSLog(@"Other");
-            break;
-        default:
-            NSLog(@"Error");
-            break;
-    }
-}
+//- (void)runTestAlertPanel {
+//    int result = NSRunAlertPanel(NSLocalizedString(@"testTitle", nil), 
+//                                 NSLocalizedString(@"testMessage", nil), 
+//                                 NSLocalizedString(@"testOK", nil), 
+//                                 NSLocalizedString(@"testCancel", nil),
+//                                 nil);
+//    switch (result) {
+//        case NSAlertDefaultReturn:
+//            NSLog(@"OK");
+//            break;
+//        case NSAlertAlternateReturn:
+//            NSLog(@"Cancel");
+//            [NSApp terminate:self];
+//            break;
+//        case NSAlertOtherReturn:
+//            NSLog(@"Other");
+//            break;
+//        default:
+//            NSLog(@"Error");
+//            break;
+//    }
+//}
 
 /*
  *  PreferenceWindowのDelegate処理

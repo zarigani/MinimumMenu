@@ -1,4 +1,5 @@
 {
 	windowTransparency = "0.9";
 	hideApplicationMenu = NO;
+	"allAroundTrackingArea" = NO;
 }
