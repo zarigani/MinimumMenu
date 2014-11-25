@@ -92,10 +92,10 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
         //NSString* appName = [activeApp valueForKey:@"NSApplicationName"];
         //[[NSWorkspace sharedWorkspace] launchApplication:appName];
         NSString* currentAppBundleID = [activeApp valueForKey:@"NSApplicationBundleIdentifier"];
-        [[NSWorkspace sharedWorkspace] launchAppWithBundleIdentifier:currentAppBundleID 
-                                                             options:NSWorkspaceLaunchDefault 
-                                      additionalEventParamDescriptor:nil 
-                                                    launchIdentifier:nil];
+        NSArray* runningApplications = [NSRunningApplication runningApplicationsWithBundleIdentifier:currentAppBundleID];
+        if ([runningApplications count] > 0) {
+            [runningApplications[0] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
+        }
     }
 }
 
