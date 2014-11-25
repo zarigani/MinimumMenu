@@ -125,7 +125,7 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
     ////NSLog([NSRunningApplication currentApplication].bundleIdentifier);
     ////NSLog([currentApp valueForKey:@"NSApplicationBundleIdentifier"]);
     ////NSLog(NSStringFromPoint([NSEvent mouseLocation]));
-    if (CGEventGetLocation(CGEventCreate(nil)).y > 0.0) {
+    if (CGEventGetLocation(CGEventCreate(nil)).y > 22.0) {
         [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
     }
 }
