@@ -125,7 +125,8 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
     ////NSLog([NSRunningApplication currentApplication].bundleIdentifier);
     ////NSLog([currentApp valueForKey:@"NSApplicationBundleIdentifier"]);
     ////NSLog(NSStringFromPoint([NSEvent mouseLocation]));
-    if (CGEventGetLocation(CGEventCreate(nil)).y > 22.0) {
+    CGPoint exitedPoint = CGEventGetLocation(CGEventCreate(nil));
+    if (exitedPoint.y > 22.0) {
         [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
     }
 }
@@ -134,7 +135,8 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
     ////NSLog(@"mouseExited");
     [self hide_];
     ////NSLog([NSString stringWithFormat:@"%f", CGEventGetLocation(CGEventCreate(nil)).y]);
-    if (CGEventGetLocation(CGEventCreate(nil)).y > 0.0) {
+    CGPoint exitedPoint = CGEventGetLocation(CGEventCreate(nil));
+    if (exitedPoint.y > 22.0) {
         [self restoreActiveApp];
     }
 }

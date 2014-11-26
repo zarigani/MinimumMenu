@@ -14,6 +14,7 @@
 
 static float TRACKING_HEIGHT = 1;
 static float LINE_WIDTH = 1;
+static float LINE_MARGIN = 64;
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -59,33 +60,33 @@ static float LINE_WIDTH = 1;
     NSRect	bounds = [self bounds];
     NSRect  rect;
     //addTrackingRect...はinitの中で設定しても無効、awakeFromNibの中で設定する必要あり
-    rect = NSMakeRect(bounds.origin.x, 
+    rect = NSMakeRect(bounds.origin.x + LINE_MARGIN, 
                       bounds.size.height - TRACKING_HEIGHT, 
-                      bounds.size.width, 
+                      bounds.size.width - LINE_MARGIN*2,
                       TRACKING_HEIGHT);
     trackingTop     = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
     
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"allAroundTrackingArea"]) {
         NSString* positionName = [self dockScreenEdgePosition];
         if (![positionName isEqualToString:@"bottom\n"]){
-            rect = NSMakeRect(bounds.origin.x,
+            rect = NSMakeRect(bounds.origin.x + LINE_MARGIN,
                               bounds.origin.y,
-                              bounds.size.width,
+                              bounds.size.width - LINE_MARGIN*2,
                               TRACKING_HEIGHT);
             trackingBottom  = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
         }
         if (![positionName isEqualToString:@"left\n"]){
             rect = NSMakeRect(bounds.origin.x,
-                              bounds.origin.y,
+                              bounds.origin.y + LINE_MARGIN,
                               TRACKING_HEIGHT,
-                              bounds.size.height);
+                              bounds.size.height - LINE_MARGIN*2);
             trackingLeft    = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
         }
         if (![positionName isEqualToString:@"right\n"]){
             rect = NSMakeRect(bounds.size.width - TRACKING_HEIGHT,
-                              bounds.origin.y,
+                              bounds.origin.y + LINE_MARGIN,
                               TRACKING_HEIGHT,
-                              bounds.size.height);
+                              bounds.size.height - LINE_MARGIN*2);
             trackingRight   = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
         }
     }
