@@ -134,7 +134,7 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
     ////NSLog(@"mouseExited");
     [self hide_];
     ////NSLog([NSString stringWithFormat:@"%f", CGEventGetLocation(CGEventCreate(nil)).y]);
-    if (CGEventGetLocation(CGEventCreate(nil)).y > 22.0) {
+    if (CGEventGetLocation(CGEventCreate(nil)).y > 0.0) {
         [self restoreActiveApp];
     }
 }
