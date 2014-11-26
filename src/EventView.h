@@ -14,6 +14,7 @@
     bool allAroundTrackingArea;
 }
 
+- (NSString*)dockScreenEdgePosition;
 - (void)addTrackingRects;
 - (void)removeTrackingRects;
 - (void)setAllAroundTrackingArea:(bool)flag;

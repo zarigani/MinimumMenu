@@ -34,6 +34,23 @@ static float LINE_WIDTH = 1;
                                            forKey:@"NSContinuouslyUpdatesValue"]];
 }
 
+- (NSString*)dockScreenEdgePosition{
+    NSTask* task = [[NSTask alloc] init];
+    NSPipe* stdPipe = [[NSPipe alloc] init];
+    [task setLaunchPath:@"/bin/sh"];
+    [task setArguments: [NSArray arrayWithObjects: @"-c", @"/usr/bin/defaults read com.apple.dock orientation", nil]];
+    [task setStandardOutput:stdPipe];
+    [task launch];
+
+    NSFileHandle* stdHandle = [stdPipe fileHandleForReading];
+    NSData* stdData = [stdHandle readDataToEndOfFile];
+    NSString* string = [[[NSString alloc] initWithData:stdData encoding:NSUTF8StringEncoding] autorelease];
+
+    [task release];
+    [stdPipe release];
+    return string;
+}
+
 - (void)addTrackingRects {
     [self removeTrackingRects];
     //自分の高さに合わせてウィンドウ上限に再配置する
@@ -49,23 +66,28 @@ static float LINE_WIDTH = 1;
     trackingTop     = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
     
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"allAroundTrackingArea"]) {
-        rect = NSMakeRect(bounds.origin.x, 
-                          bounds.origin.y, 
-                          bounds.size.width, 
-                          TRACKING_HEIGHT);
-        trackingBottom  = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
-        
-        rect = NSMakeRect(bounds.origin.x, 
-                          bounds.origin.y, 
-                          TRACKING_HEIGHT, 
-                          bounds.size.height);
-        trackingLeft    = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
-        
-        rect = NSMakeRect(bounds.size.width - TRACKING_HEIGHT, 
-                          bounds.origin.y, 
-                          TRACKING_HEIGHT, 
-                          bounds.size.height);
-        trackingRight   = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
+        NSString* positionName = [self dockScreenEdgePosition];
+        if (![positionName isEqualToString:@"bottom\n"]){
+            rect = NSMakeRect(bounds.origin.x,
+                              bounds.origin.y,
+                              bounds.size.width,
+                              TRACKING_HEIGHT);
+            trackingBottom  = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
+        }
+        if (![positionName isEqualToString:@"left\n"]){
+            rect = NSMakeRect(bounds.origin.x,
+                              bounds.origin.y,
+                              TRACKING_HEIGHT,
+                              bounds.size.height);
+            trackingLeft    = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
+        }
+        if (![positionName isEqualToString:@"right\n"]){
+            rect = NSMakeRect(bounds.size.width - TRACKING_HEIGHT,
+                              bounds.origin.y,
+                              TRACKING_HEIGHT,
+                              bounds.size.height);
+            trackingRight   = [self addTrackingRect:rect owner:[self window] userData:nil assumeInside:NO];
+        }
     }
     
     ////NSLog(@"%@", NSStringFromRect(rect)); //{{0, 799}, {1280, 1}}
