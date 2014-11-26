@@ -285,8 +285,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -298,8 +298,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
