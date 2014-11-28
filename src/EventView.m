@@ -163,14 +163,10 @@ static float LINE_MARGIN = 64;
 	//[[[NSColor blackColor] colorWithAlphaComponent:1.0] set];
     [[[NSColor keyboardFocusIndicatorColor] colorWithAlphaComponent:1.0] set];
     NSSetFocusRingStyle(NSFocusRingOnly);//このあと描画した図形の周囲にフォーカスリングが表示される
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"allAroundTrackingArea"]) {
-        NSFrameRect([self bounds]);
-    }else {
-        NSRectFill(NSMakeRect([self bounds].origin.x, 
-                              [self bounds].size.height - LINE_WIDTH, 
-                              [self bounds].size.width, 
-                              LINE_WIDTH));
-    }
+    NSRectFill(NSMakeRect([self bounds].origin.x,
+                          [self bounds].size.height - LINE_WIDTH,
+                          [self bounds].size.width,
+                          LINE_WIDTH));
     
     //フォーカスリングを描画する
 	//[self setFocusRingType:NSFocusRingTypeExterior];
