@@ -120,7 +120,6 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
 
 - (void)mouseEntered:(NSEvent *)event {
     ////NSLog(@"mouseEntered");
-    [self show];
     [self storeActiveApp];
     ////NSLog([NSRunningApplication currentApplication].bundleIdentifier);
     ////NSLog([currentApp valueForKey:@"NSApplicationBundleIdentifier"]);
@@ -128,6 +127,9 @@ static NSString*	APP_BUNDLE_ID = @"com.bebekoubou.minu";
     CGPoint exitedPoint = CGEventGetLocation(CGEventCreate(nil));
     if (exitedPoint.y > 22.0) {
         [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
+    }
+    else{
+        [self show];
     }
 }
 
